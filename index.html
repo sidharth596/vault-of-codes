@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vault of Codes - Contact Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vault of Codes - Enhanced</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Contact Us</h1>
-    <form id="contactForm">
+  <header>
+    <h1>Vault of Codes</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p class="center-text">
+      Vault of Codes is a hub for coders, learners, and tech lovers. We provide micro-internships, mini-projects, and opportunities to build real-world skills.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Web Development Internships</h3>
+        <p>Hands-on training for front-end and back-end development with real-time projects.</p>
+      </div>
+      <div class="card">
+        <h3>Python Projects</h3>
+        <p>Enhance your Python knowledge with practical problems and projects.</p>
+      </div>
+      <div class="card">
+        <h3>Mini Internships</h3>
+        <p>Short-term learning opportunities to gain valuable industry experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="card-container" id="project-list">
+      <!-- Dynamically added via JS -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)" id="contactForm">
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
     </form>
-    <p id="thanksMessage"></p>
-  </div>
+    <p id="thankYouMessage" class="thank-you-msg">Thanks for filling the form!</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Vault of Codes </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
